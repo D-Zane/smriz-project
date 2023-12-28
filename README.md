@@ -10,7 +10,7 @@ Python, Django, Django Rest Framework, Docker, Gunicorn, NGINX, PostgreSQL, Yand
 ### Запуск проекта:
 
 
-- В директории infra создать файл .env и заполнить своими данными по аналогии с example.env:
+- В директории infra создать файл .env и заполнить данными:
 ```
 DB_ENGINE=django.db.backends.postgresql
 POSTGRES_DB=postgres
