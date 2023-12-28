@@ -37,12 +37,12 @@ docker-compose -f docker-compose.yml up -d
 
 - После успешной сборки выполнить миграции:
 ```
-sudo docker compose exec backend python manage.py migrate
+docker compose exec backend python manage.py migrate
 ```
 
 - Создать суперпользователя:
 ```
-sudo docker compose exec backend python manage.py createsuperuser
+docker compose exec backend python manage.py createsuperuser
 ```
 - Существующий созданный суперпользователь
 ```
@@ -51,18 +51,18 @@ Password - 1
 ```
 - Собрать статику:
 ```
-sudo docker compose exec backend python manage.py collectstatic --noinput
+docker compose exec backend python manage.py collectstatic --noinput
 ```
 
 - Наполнить базу данных содержимым из файла ingredients.json:
 ```
-sudo docker compose exec backend python manage.py loaddata ingredients.json
+docker compose exec backend python manage.py loaddata ingredients.json
 ```
 
 - Для остановки контейнеров Docker:
 ```
-sudo docker compose down -v      # с их удалением
-sudo docker compose stop         # без удаления
+docker compose down -v      # с их удалением
+docker compose stop         # без удаления
 ```
 
 
