@@ -11,7 +11,7 @@ services:
     restart: always
 
   backend:
-    image: savenkov/smriz-backend:latest
+    image: backend:latest
     restart: always
     volumes:
       - static_value:/app/static/
@@ -23,7 +23,7 @@ services:
       - ./.env
 
   frontend:
-    image: savenkov/smriz-frontend:latest
+    image: frontend:latest
     volumes:
       - ../frontend/:/app/result_build/
 
